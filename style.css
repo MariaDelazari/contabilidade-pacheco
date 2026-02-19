@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 120px;
+   z-index: 9;
+   position: relative;
+   background-color: #FFFF;
+   box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+   
+  
+}
+
+.header-logo img {
+    height: 225px;
+    margin-left: 20px;
+   
+}
+
+.header-nav  {
+    display: flex;
+    margin-right: 50px;
+    gap: 20px;
+    
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 20px;
+   
+}
+
+
