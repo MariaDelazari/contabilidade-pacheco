@@ -8,24 +8,26 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 120px;
+   height: 100px;
+   overflow: visible;
    z-index: 9;
-   position: relative;
-   background-color: #FFFF;
-   box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+   background-color: #fff;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+   position: sticky;
+   top: 0;
+   padding: 0 60px;
    
   
 }
 
 .header-logo img {
-    height: 225px;
-    margin-left: 20px;
+    height: 90px;
+    width: auto;
    
 }
 
 .header-nav  {
     display: flex;
-    margin-right: 50px;
     gap: 20px;
     
 }
@@ -33,9 +35,38 @@
 .nav-list{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
     font-size: 20px;
+    align-items: center;
    
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #2563eb;
+}
+
+.btn-primary {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    background-color: #2563eb;
+    padding: 10px 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
 }
 
 
