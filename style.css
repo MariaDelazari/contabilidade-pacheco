@@ -1,72 +1,150 @@
+/* =========================
+   RESET & VARIABLES
+========================= */
+
+:root {
+    /* Cores principais */
+    --color-primary-dark: #0F2744;
+    --color-hero-bg: #5A6F73;
+    --color-hero-bg-dark: #44575B;
+    --color-background: #F4F6F8;
+    --color-text-primary: #2F3A40;
+    --color-text-light: #E6ECEF;
+    --color-white: #FFFFFF;
+
+    /* Sombras */
+    --shadow-header: 0 4px 15px rgba(0,0,0,0.08);
+    --shadow-button: 0 6px 14px rgba(15,39,68,0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* =========================
+   BASE
+========================= */
+
+body {
+    background-color: var(--color-background);
+    font-family: sans-serif;
+    color: var(--color-text-primary);
+}
+
+h1, h2 {
+    color: var(--color-primary-dark);
+}
+
+p {
+    color: var(--color-text-primary);
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 .header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 100px;
-   overflow: visible;
-   z-index: 9;
-   background-color: #fff;
-   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-   position: sticky;
-   top: 0;
-   padding: 0 60px;
-   
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 60px;
+    background-color: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .header-logo img {
     height: 90px;
     width: auto;
-   
 }
 
-.header-nav  {
+.header-nav {
     display: flex;
-    gap: 20px;
-    
+    gap: 30px;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     list-style: none;
     gap: 30px;
-    font-size: 20px;
+    font-size: 18px;
     align-items: center;
-   
 }
 
 .nav-list a {
     text-decoration: none;
-    color: #111;
+    color: var(--color-primary-dark);
     font-weight: 500;
     transition: 0.3s ease;
 }
 
 .nav-list a:hover {
-    color: #2563eb;
+    color: var(--color-hero-bg);
 }
+
+/* =========================
+   BUTTONS
+========================= */
 
 .btn-primary {
     font-weight: 600;
     font-size: 16px;
-    color: #fff;
+    color: var(--color-white);
     border: none;
-    background-color: #2563eb;
-    padding: 10px 17px;
+    background-color: var(--color-primary-dark);
+    padding: 12px 26px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
+    box-shadow: var(--shadow-button);
 }
 
 .btn-primary:hover {
-    background-color: #1e40af;
+    background-color: #0B1F33;
     transform: translateY(-2px);
 }
 
 
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center; /* corrigido */
+    gap: 60px;
+    padding: 100px 60px;
+
+    background: linear-gradient(
+        135deg,
+        var(--color-hero-bg),
+        var(--color-hero-bg-dark)
+    );
+}
+
+.hero h1 {
+    color: var(--color-white);
+    font-size: 48px;
+}
+
+.hero p {
+    color: var(--color-text-light);
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+}
