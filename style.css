@@ -5,7 +5,7 @@
 :root {
     /* Cores principais */
     --color-primary-dark: #0F2744;
-    --color-hero-bg: #5A6F73;
+    --color-hero-bg: #6c8388c9;
     --color-hero-bg-dark: #44575B;
     --color-background: #F4F6F8;
     --color-text-primary: #2F3A40;
@@ -22,6 +22,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Plus Jakarta Sans", sans-serif;
+    list-style: none;
 }
 
 /* =========================
@@ -31,7 +32,7 @@
 body {
     background-color: var(--color-background);
     font-family: sans-serif;
-    color: var(--color-text-primary);
+    color: var(--color-text-primary);  
 }
 
 h1, h2 {
@@ -40,7 +41,7 @@ h1, h2 {
 
 p {
     color: var(--color-text-primary);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* =========================
@@ -57,11 +58,11 @@ p {
     position: sticky;
     top: 0;
     z-index: 9;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 .header-logo img {
-    height: 90px;
+    height: 220px;
     width: auto;
 }
 
@@ -72,7 +73,6 @@ p {
 
 .nav-list {
     display: flex;
-    list-style: none;
     gap: 30px;
     font-size: 18px;
     align-items: center;
@@ -93,22 +93,59 @@ p {
    BUTTONS
 ========================= */
 
-.btn-primary {
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 600;
     font-size: 16px;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.hero-btn {
+    margin: 18px 0px;
+    margin-left: 9px;
+}
+
+/* PRIMARY */
+
+.btn-primary {
+    background-color: var(--color-primary-dark);
     color: var(--color-white);
     border: none;
-    background-color: var(--color-primary-dark);
-    padding: 12px 26px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: var(--shadow-button);
+    box-shadow: 0 8px 20px rgba(15,39,68,0.18);
+    
 }
 
 .btn-primary:hover {
     background-color: #0B1F33;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(15,39,68,0.25);
+}
+
+/* SECONDARY */
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15,39,68,0.15);
+}
+
+.hero-btn {
+    margin-right: 10px;
+    margin-bottom: 10px; 
 }
 
 
@@ -120,8 +157,8 @@ p {
 
 .hero {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center; /* corrigido */
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center; 
     gap: 60px;
     padding: 100px 60px;
 
@@ -133,18 +170,30 @@ p {
 }
 
 .hero h1 {
-    color: var(--color-white);
+    color: var(--color-primary-dark);
     font-size: 48px;
+    line-height: 1.2;
 }
 
 .hero p {
-    color: var(--color-text-light);
+    color: var(--color-text-primary);
     font-size: 18px;
     margin-top: 20px;
     font-weight: 500;
+    line-height: 1.6;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
+    object-fit: cover;
 }
+
+
+
+.hero-benefits li {
+    margin-top: 18px;
+    line-height: 1.5;
+    
+}
+
